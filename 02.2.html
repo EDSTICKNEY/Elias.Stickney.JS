@@ -1,0 +1,19 @@
+<html>
+<body>
+<script type='text/javascript'>
+var n, f, i;
+n = +prompt ('Введите N', '');
+f = 1;
+i = 1;
+if (n < 0 || isNaN(n)) document.write("Hello user! Try it again! I believe in you!");
+else {
+do {
+f *= i;
+i++;
+}
+while (i<=n);
+}
+document.write("Факториал = " + f);
+</script>
+</body>
+</html>

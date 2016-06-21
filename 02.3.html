@@ -1,0 +1,89 @@
+﻿<html>
+<body>
+<script type='text/javascript'>
+var i1, i2, n, x;
+i1=1;
+i2=1;
+n = +prompt('Введите значение N','');
+if (n <= 1 || isNaN(n)) document.write("Hello user! Try it again! I believe in you!");
+else {
+//прямоугольник
+for (i1 = 1; i1 <= n; i1++) {
+  document.write("*");
+  for (i2 = 1; i2 <n; i2++){
+   if (i1 == 1 || i1 == n) {
+    document.write("*");
+    }
+    else {
+    document.write("&nbsp" + "&nbsp");
+    }
+  }
+document.write("*" + "<br />"); 
+}
+//прямоугольный треугольник
+document.write("<br />" + "*" + "<br />"); 
+for (i1 = 1; i1 <= n; i1++) {
+  document.write("*");
+  for (i2 = 1; i2 <i1; i2++){
+   if (i1 == 1 || i1 == n) {
+    document.write("*");
+    }
+    else {
+    document.write("&nbsp" + "&nbsp");
+    }
+  }
+document.write("*" + "<br />"); 
+}
+document.write("<br />"); 
+//ромб
+for (i1 = 1; i1 < n; i1++) {
+  for (i2 = (n-i1); i2 > 0; i2--){
+  document.write("&nbsp" + "&nbsp");
+  }
+  for (i2 = 1; i2 <= (i1*2); i2++) {
+  if (i2 == 1 || i2 == (i1*2)) {
+  document.write("*");
+  }
+  else {
+  document.write("&nbsp" + "&nbsp");
+  }
+  }
+  document.write("<br />"); 
+  }
+for (i1 = n; i1 > 0; i1--) {
+  for (i2 = (n-i1); i2 > 0; i2--){
+  document.write("&nbsp" + "&nbsp");
+  }
+  for (i2 = 1; i2 < i1-n; i2++){
+  document.write("&nbsp" + "&nbsp");
+  }
+  for (i2 = (i1*2); i2 >= 1; i2--) {
+  if (i2 == 1 || i2 == (i1*2)) {
+  document.write("*");
+  }
+  else {
+  document.write("&nbsp" + "&nbsp");
+  }
+  }
+  document.write("<br />");
+  }  
+  document.write("<br />");
+//треугольник
+for (i1 = 1; i1 < n*2; i1++) {
+  for (i2 = ((n*2)-i1); i2 > 0; i2--){
+  document.write("&nbsp" + "&nbsp");
+  }
+  for (i2 = 1; i2 <= (i1*2); i2++) {
+  if (i2 == 1 || i2 == (i1*2) || i1 == ((2*n)-1)) {
+  document.write("*");
+  }
+  else {
+  document.write("&nbsp" + "&nbsp");
+  }
+  }
+  document.write("<br />"); 
+  }
+}
+</script>
+</body>
+</html>
