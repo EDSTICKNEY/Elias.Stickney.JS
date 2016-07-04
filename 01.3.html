@@ -1,12 +1,31 @@
 <html>
 <body>
 <script type='text/javascript'>
-var v, s, h, r;
-h = +prompt ('¬ведите высоту', '');
-r = +prompt ('¬ведите радиус', '');
-v = Math.PI * r * 2 * h;
-s = 2 * Math.PI * r * h + 2 * Math.PI * r * 2;
-document.write("ќбъем =" + v + ",  ѕлощадь = " + s);
+var arr = ["1","2","5","7","4","5","4","4","4","3","3","3","7","5","5","5","5","3","2","5","8","0","3"];
+var maxcount = 1, max = "", currentcount = 1, current = "";
+for (i=1; i<arr.length; i++) {
+if (arr[i] == arr[i-1]) {
+currentcount++;
+current +=arr[i];
+}
+else {
+if (currentcount > maxcount) {
+                
+current += arr[i - 1];
+                
+maxcount = currentcount;
+               
+max = current;
+           
+}
+            
+current = "";
+            
+currentcount = 1;
+   
+}
+}
+document.write(max);
 </script>
 </body>
 </html>
