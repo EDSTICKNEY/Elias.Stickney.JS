@@ -1,13 +1,11 @@
 <html>
 <body>
 <script type='text/javascript'>
-var x=6, y=15, z=4;
-document.write((x+= y - x++ * z) + "<br />");
-z = --x - y * 5
-document.write(z + "<br />");
-document.write((y /= x + 5 % z) + "<br />");
-document.write((z = x++ + y * 5) + "<br />");
-document.write(x = y - x++ * z);
+var arr = [];
+for (i=0; i<20; i++) {
+arr[i]= i*5;
+console.log(arr[i]);
+}
 </script>
 </body>
 </html>
