@@ -1,0 +1,15 @@
+<html>
+<body>
+<script type='text/javascript'>
+var original;
+original = +prompt('Введите число');
+if ( isNaN(original)) {
+document.write("Как же так. Может все-таки число?")
+}
+else 
+{
+document.write(String(original).split("").reverse().join(""));
+}
+</script>
+</body>
+</html>
