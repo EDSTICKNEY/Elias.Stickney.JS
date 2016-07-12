@@ -1,0 +1,28 @@
+<html>
+<body>
+<script type="text/javascript">
+	function str(a){
+		if(typeof a === "undefined"){
+			alert("String is empty");
+		}
+		else{
+			alert("String is non empty");
+		}
+	}
+	str.isNonEmptyStr = function(){
+		if((typeof arguments[0] === "string") && arguments[0] != ""){
+			return true;
+		}
+		else{
+			return false;
+		}
+	}
+	document.write(str.isNonEmptyStr() + '<br />');
+	document.write(str.isNonEmptyStr("") + '<br />');
+	document.write(str.isNonEmptyStr("a") + '<br />');
+	document.write(str.isNonEmptyStr(1) + '<br />');
+	document.write(str() + '<br />');
+	document.write(str("a"));
+</script>
+</body>
+</html>

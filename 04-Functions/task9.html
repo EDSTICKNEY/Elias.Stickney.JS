@@ -1,0 +1,28 @@
+<html>
+<body>
+<script type="text/javascript">
+	function toConsole(parameter){
+		console.log(parameter);
+	}
+	function toAlert(parameter){
+		alert(parameter);
+	}
+	function splitToWords(msg, callback){
+		var arr = [];
+		arr = msg.split(" ");
+		if(typeof callback === "undefined"){
+			return arr;
+		}
+		if(callback == toConsole){
+			return toConsole(arr);
+		}
+		if(callback == toAlert){
+			return toAlert(arr);
+		}
+	}
+	splitToWords("My very long text msg", toConsole);
+	splitToWords("My very long text msg", toAlert);
+	console.log( splitToWords("My very long text msg") );
+</script>
+</body>
+</html>

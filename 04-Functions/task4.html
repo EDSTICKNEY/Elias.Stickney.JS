@@ -1,0 +1,16 @@
+<html>
+<body>
+<script type="text/javascript">
+	var fib = function fibonachi(n) {
+		var fibonacci = [0, 1];
+		for (let i = 2; i <= n; i ++) {
+			fibonacci[i] = fibonacci[i-1] + fibonacci[i-2];
+			X = fibonacci[i];
+		}
+		document.write('Fibo numbers array: ' + fibonacci.slice(0,n+1) + ' <br />');
+		document.write('Fibo number: ' + X);
+	};
+	fib(+prompt('Write F number'));
+</script>
+</body>
+</html>
