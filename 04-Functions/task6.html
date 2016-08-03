@@ -1,0 +1,22 @@
+<html>
+<body>
+<script type="text/javascript">
+	function itemList(){
+		var firstStrArr = [],
+				secondStrArr = [];
+		for (let i = 0; i< arguments.length; i++){
+			firstStrArr = firstStrArr.concat(arguments[i].split("."));
+		}
+		for (let i = 0; i<firstStrArr.length; i++){
+			if(firstStrArr[i].indexOf(":") != -1){
+				secondStrArr.push(firstStrArr[i].substring((firstStrArr[i].indexOf(":")+2)));
+			}
+		}
+		return secondStrArr;
+	}
+	var str1 = "This is the first sentence. This is a sentence with a list of items: cherries, oranges, apples, bananas.",
+			str2 = "This is the second sentence. This is a sentence with a list of items: red, blue, yellow, black.";
+	document.write(itemList(str1,str2));
+</script>
+</body>
+</html>

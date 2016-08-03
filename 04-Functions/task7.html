@@ -1,0 +1,17 @@
+<html>
+<body>
+<script type="text/javascript">
+	function find(testString, test){
+		if(typeof test === "undefined"){
+			test = testString;
+		}
+		return testString.indexOf(test);
+	}
+	var testString1 = "abc", test1 = "b", testString2 = "abc", testString3 = "abc", test3 = "d", testString4 = "abc", test4 = "a", test5 = "b";
+	document.write(find(testString1,test1) + '<br />');
+	document.write(find(testString2) + '<br />');
+	document.write(find(testString3,test3) + '<br />');
+	document.write(find(testString4,test4,test5) + '<br />');
+</script>
+</body>
+</html>
