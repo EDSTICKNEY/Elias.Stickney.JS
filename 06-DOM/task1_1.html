@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[06-DOM] Task 1</title>
+    <script src="../lodash/lodash.min.js"></script>
+</head>
+<body>
+    <script>
+        //using querySelectorAll()
+        var selectorDivCounter = function () {
+            var divs = document.querySelectorAll('div > div');
+            var result = document.querySelector('#result1 span');
+            var counter = divs.length;
+
+            console.log('We have found ' + counter + ' divs inside divs');
+            result.innerHTML = counter;
+        };
+
+        //using getElementsByTagName()
+        var tagNameDivCounter = function () {
+            var counter = 0;
+            var divs = document.getElementsByTagName('div');
+            var result = document.querySelector('#result2 span');
+
+            _.forEach(divs, function (el) {
+                if (el.parentElement.nodeName === 'DIV') {
+                    counter++;
+                }
+            });
+
+            console.log('We have found ' + counter + ' divs inside divs');
+            result.innerHTML = counter;
+        };
+    </script>
+    <div class="first">
+        <div></div>
+        <div></div>
+    </div>
+    <div class="second">
+        <div>
+            <div></div>
+            <div>
+                <div></div>
+            </div>
+        </div>
+    </div>
+    <button class="bttn" onclick="selectorDivCounter()">Use querySelectorAll()</button>
+    <button class="bttn" onclick="tagNameDivCounter()">Use getElementsByTagName()</button>
+
+    <div class="result" id="result1">
+        Calculate with querySelectorAll(): <span></span>
+    </div>
+    <div class="result" id="result2">
+        Calculate with getElementsByTagName(): <span></span>
+    </div>
+</body>
+</html>
