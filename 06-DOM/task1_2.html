@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[06-DOM] Task 1</title>
+    <script src="../lodash/lodash.min.js"></script>
+</head>
+<body>
+    <script>
+        var printToConsole = function() {
+            var input = document.querySelector('input#typeInput');
+
+            if (input.value) {
+                console.log(input.value);
+            } else {
+                console.log('input is empty');
+            }
+        };
+    </script>
+    <div class="inputNBttn">
+    <input type="text" class="input" name="input" id="typeInput">
+    <button class="bttn" onclick="printToConsole()">Print to console</button>
+    </div>
+</body>
+</html>

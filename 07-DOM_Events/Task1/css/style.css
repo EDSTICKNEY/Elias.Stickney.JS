@@ -1,0 +1,35 @@
+body{
+	background-color:#3c3c3c;
+	font-family: 'Open Sans', sans-serif;
+}
+.slider {
+	position: relative;
+	margin: 20px auto;
+	width: 1000px;
+	height: 700px;
+}
+#image {
+	margin: 0 auto;
+	width: 1000px;
+	height: 700px;
+	background-color: #aaa;
+	background-size: cover;
+}
+button {
+	position: absolute;
+	top: 310px;
+	width: 40px;
+	height: 100px;
+	font-size: 27pt;
+	text-align: center;
+	color: #aaa;
+	background-color: #000;
+	opacity: 0.4;
+	border: none;
+}
+.left {
+	left: 10px;
+}
+.right {
+	right: 10px;
+}
